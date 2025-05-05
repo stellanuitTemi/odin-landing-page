@@ -1,0 +1,48 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #efefef;
+  font-family: "Roboto-flex", sans-serif;
+}
+
+.top-navigation {
+  background-color: #1f2937;
+  color: #f9faf8;
+  max-height: 4rem;
+  padding-bottom: 2em;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2.4rem;
+}
+
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 1.8rem;
+  color: #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.hero-header {
+  background-color: #1f2937;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
