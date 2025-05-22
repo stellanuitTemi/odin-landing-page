@@ -6,12 +6,22 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #efefef;
+  background-image: linear-gradient(to right, #efefef, #fff);
   font-family: "Roboto-flex", sans-serif;
 }
 
 .top-navigation {
-  background-color: #1f2937;
+  background-image: linear-gradient(
+      to bottom right,
+      #0f0c29,
+      #302b63,
+      rgba(36, 36, 62, 0.95)
+    ),
+    url("images/Asset1.png");
+  background-blend-mode: screen;
+  background-size: contain;
+  background-repeat: repeat;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
   color: #f9faf8;
   max-height: 4rem;
   padding-bottom: 2em;
@@ -31,19 +41,28 @@ ul {
   text-decoration: none;
   list-style-type: none;
   font-size: 1.8rem;
-  color: #e5e7eb;
   display: flex;
   justify-content: space-between;
   gap: 1em;
 }
 
+ul a {
+  text-decoration: none;
+  color: #e5e7eb;
+}
+
 .hero-header {
-  background-color: #1f2937;
+  background-image: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e),
+    url("images/Asset1.png");
+  background-blend-mode: screen;
+  background-size: contain;
+  background-repeat: repeat;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-evenly;
-  padding: 9em 0;
+  align-items: center;
+  padding: 9em 0 0 0;
   gap: 3em;
 }
 
@@ -64,25 +83,35 @@ h1 {
   line-height: 1;
 }
 
-.sign-up {
+.header-image {
+  width: 1280px;
+}
+
+.header-image img {
+  max-width: 100%;
+  opacity: 0.9;
+  object-fit: cover;
+}
+
+.contact {
   font-size: 1.6rem;
   font-weight: 500;
   padding: 0.5em 2.5em;
-  border: none;
-  border-radius: 0.4em;
+  border: solid 2px rgba(255, 255, 255, 0.8);
+  border-radius: 2em;
   cursor: pointer;
 }
 
-.sign-up.normal {
-  background-color: #3882f6;
+.contact.normal {
+  background-color: #302b63;
   color: #f9faf8;
   opacity: 1;
   transition: 0.3s;
 }
 
-.sign-up.normal:hover,
-.sign-up.inverse:hover {
-  opacity: 0.9;
+.contact.normal:hover,
+.contact.inverse:hover {
+  opacity: 0.6;
 }
 
 .header-image {
@@ -95,7 +124,14 @@ h1 {
 
 h2 {
   font-size: 3.6rem;
-  color: #1f2937;
+  color: #302b63;
+  background-image: linear-gradient(#0f0c29, #302b63, #24243e);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
   font-weight: 900;
   text-align: center;
 }
@@ -112,6 +148,55 @@ h2 {
   flex-wrap: wrap;
   flex-basis: 300px;
   justify-content: center;
+  width: 300px;
+  height: 300px;
+  border: solid #302b63 4px;
+  border-radius: 2em;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.card img {
+  width: 1000px;
+  object-fit: cover;
+  position: relative;
+  top: -30%;
+  left: 5%;
+  scale: 0.8;
+}
+
+.card img:hover {
+  scale: 1;
+  transition: 0.3s;
+}
+
+.talent-name {
+  font-size: 2rem;
+  font-weight: 900;
+  padding: 0.5em 2.5em;
+  border: solid 3px #302b63;
+  border-radius: 2em;
+  cursor: pointer;
+  background-color: #fff;
+  color: #1f2937;
+  opacity: 1;
+  transition: 0.3s;
+  margin-left: 2.5em;
+  margin-top: -1em;
+  position: absolute;
+  z-index: 2;
+}
+
+.talent-name.alto {
+  margin-left: 3.5em;
+}
+
+#sigewinne {
+  top: -40%;
+}
+
+#varesa {
+  top: -30%;
 }
 
 .card p {
@@ -159,13 +244,12 @@ h2 {
   border-radius: 1em;
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  flex-basis: 60%;
 }
 
 .call-text {
   font-size: 2.4rem;
   color: #f9faf8;
-  line-height: 0.5;
 }
 
 h3 {
@@ -175,9 +259,10 @@ h3 {
 
 .call-text > p {
   font-size: 1.6rem;
+  width: 63ch;
 }
 
-.sign-up.inverse {
+.contact.inverse {
   background-color: #3882f6;
   border: 2px solid #f9faf8;
   color: #f9faf8;
@@ -186,7 +271,16 @@ h3 {
 }
 
 .end-credits {
-  background-color: #1f2937;
+  background-image: linear-gradient(
+      to top right,
+      #0f0c29,
+      #302b63,
+      rgba(36, 36, 62, 0.95)
+    ),
+    url("images/Asset1.png");
+  background-blend-mode: screen;
+  background-size: contain;
+  background-repeat: repeat;
   color: #f9faf8;
   font-size: 1.2rem;
   padding: 2em;
